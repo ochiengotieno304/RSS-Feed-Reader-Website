@@ -1,0 +1,31 @@
+<br><br>
+<form class="d-flex">
+    <% if @search%>
+        <input class="form-control me-2" type="search" placeholder="Search URL" name="search", value= <%=@search%> >
+    <% else %>
+        <input class="form-control me-2" type="search" placeholder="Search URL" name="search" >
+    <% end %>
+    <button class="btn btn-outline-success" type="submit">Display</button>
+</form>
+
+<br>
+<% sanitize @des%>
+
+<% if @search %>
+    <div class="card text-center">
+        <div class="card-header">
+            <%= @title %>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"><%= @description %></h5>
+            <br>
+            Read in the web: <%= link_to @link, @link, target: "_blank" %> 
+            <p class="card-text">Hit Reload to display latest feed.</p>
+            <button class="btn btn-primary" onClick="window.location.reload();">Reload</>
+        </div>
+        <div class="card-footer text-muted">
+            Published: <%= @pub_date %>
+        </div>
+    </div>
+<% end %>
+

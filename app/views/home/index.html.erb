@@ -1,7 +1,7 @@
 <br><br>
 <form class="d-flex">
     <% if @search%>
-        <input class="form-control me-2" type="search" placeholder="Search URL" name="search", value= <%=@search%> >
+        <input class="form-control me-2" type="search" placeholder="Search URL" name="search" onClick="this.select();", value= <%=@search%> >
     <% else %>
         <input class="form-control me-2" type="search" placeholder="Search URL" name="search" >
     <% end %>

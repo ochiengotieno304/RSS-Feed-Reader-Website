@@ -6,7 +6,6 @@ ruby '3.0.0'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
-gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 gem 'webpacker', '~> 5.3'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
@@ -20,6 +19,7 @@ end
 
 group :development do
   gem 'web-console', '>= 4.1.0'
+  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
   gem 'rack-mini-profiler', '~> 2.0'
 end
 
